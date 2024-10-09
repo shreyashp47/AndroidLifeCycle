@@ -12,21 +12,26 @@
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="#C98F8F"
+        android:background="#151414"
         app:layout_constraintBottom_toTopOf="@+id/nextFrag"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:ellipsize="end"
         android:text="Hello World!"
+        android:textColor="#38FF00"
+        android:textIsSelectable="true"
+        app:layout_constraintBottom_toTopOf="@+id/nextFrag"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/lastFrag"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Previous"
         app:layout_constraintBottom_toTopOf="@+id/openBottomSheet"
@@ -35,7 +40,7 @@
 
     <Button
         android:id="@+id/nextFrag"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Next"
         app:layout_constraintBottom_toTopOf="@+id/openBottomSheet"
@@ -44,11 +49,26 @@
 
     <Button
         android:id="@+id/openBottomSheet"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Bottom Sheet"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/clearBtn"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/clearBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:backgroundTint="#281EAE"
+        android:backgroundTintMode="screen"
+        android:text="Clear"
+        android:textColorLink="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/openBottomSheet"
+        app:rippleColor="#D32F2F"
+        app:strokeColor="#5A0808" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
