@@ -30,6 +30,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/nextAct"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        app:layout_constraintBottom_toTopOf="@+id/lastFrag"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <Button
         android:id="@+id/lastFrag"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

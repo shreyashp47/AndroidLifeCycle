@@ -1,5 +1,6 @@
 package com.shreyash.github.androidlifecycle
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -13,7 +14,7 @@ import java.io.InputStreamReader
 
 class MainActivity : AppCompatActivity() {
 
-    val TAG = "APPLifeCycleMainActivity"
+    val TAG = "MainActivityA"
     val FRAG_COUNT = "fragment_count"
 
     var count = 0
@@ -33,10 +34,16 @@ class MainActivity : AppCompatActivity() {
         val preview = findViewById<Button>(R.id.lastFrag)
         val bottomSheet = findViewById<Button>(R.id.openBottomSheet)
         val clearBtn = findViewById<Button>(R.id.clearBtn)
+        val nextAct = findViewById<Button>(R.id.nextAct)
 
 
         clearBtn.setOnClickListener {
             clearLogs()
+        }
+        nextAct.setOnClickListener{
+            //next activity
+            val intent = Intent(this@MainActivity, MainActivityB::class.java)
+            startActivity(intent)
         }
 
         next.setOnClickListener {
